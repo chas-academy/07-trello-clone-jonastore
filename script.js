@@ -43,3 +43,13 @@ $(document).ready(function() {
 
 
 });
+
+
+
+
+$(function(){
+    $('#createbutton').on('click', function(){
+		var clone = jQuery('#draggable').clone(true);
+        $("#wrapper").append(clone);
+    });
+});
