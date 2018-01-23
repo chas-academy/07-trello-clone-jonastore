@@ -4,12 +4,23 @@ $(document).ready(function() {
 	    $( "#draggable" ).draggable().resizable();;
 	    $( "#draggable" ).draggable({ snap: ".ui-widget-header" });
 	    $( "#droppable"  ).droppable({
+	      accept: "#draggable",
+      		classes: {
+        	"ui-droppable-active": "ui-state-active",
+        	"ui-droppable-hover": "ui-state-hover"
+      	},
 	      drop: function( event, ui ) {
+
 	        $( this )
 	          .addClass( "ui-state-highlight" )
 	      }
 	    });
 	     $( "#droppable2"  ).droppable({
+	     	accept: "#draggable",
+      		classes: {
+        	"ui-droppable-active": "ui-state-active",
+        	"ui-droppable-hover": "ui-state-hover"
+      	},
 	      drop: function( event, ui ) {
 	        $( this )
 	          .addClass( "ui-state-highlight" )
@@ -29,6 +40,6 @@ $(document).ready(function() {
 
 	$("#infobutton")
 
-	
+
 
 });
