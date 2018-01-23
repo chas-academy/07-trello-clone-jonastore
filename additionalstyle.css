@@ -1,13 +1,22 @@
 #draggable { 
   	background: lightblue; 
-  	width: 180px; height: 150px; 
+  	width: 272px; height: 186px; 
   	padding: 0.5em; 
   	z-index: 1000;
   }
 
-#droppable, #droppable2 {
-	float: right;
-	width: 198px;
+  .row {
+  display: flex;
+  text-align: center;
+}
+
+[id^="droppable"] {
+	display: flex;
+	flex: 4;
+ 	flex-direction: column;
+	width: 272px;
 	height: 300px;
 	padding: 0.5em;
+
 }
+

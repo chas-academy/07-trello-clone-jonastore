@@ -26,6 +26,19 @@ $(document).ready(function() {
 	          .addClass( "ui-state-highlight" )
 	      }
 	    });
+	     $( "#droppable3"  ).droppable({
+	     	accept: "#draggable",
+      		classes: {
+        	"ui-droppable-active": "ui-state-active",
+        	"ui-droppable-hover": "ui-state-hover"
+      	},
+	      drop: function( event, ui ) {
+	        $( this )
+	          .addClass( "ui-state-highlight" )
+	      }
+	    });
+
+
 
 
 	 });
@@ -40,12 +53,15 @@ $(document).ready(function() {
 
 	$("#infobutton")
 
+	$( function() {
+    $( "#tabs" ).tabs();
+  	} );
+
 
 
 });
 
 
-//$('#draggable').clone(true);
 
 $(function(){
     $('#createbutton').on('click', function(){

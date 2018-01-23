@@ -61,22 +61,28 @@
 
 </div>
 <div id="draggable" class="ui-widget-content">
-  <p>Drag me around</p>
-  <input type="text" name="date" id="date" placeholder="Set deadline">
-  <button id="infobutton">More info</button>
-  <div id="dialog" title="Basic dialog">
-  <p>This is the information that will appear on the card.</p>
-  </div>
+	<div id="tabs">
+	<ul>
+  		<li><a href="#tabs-2">Proin dolor</a></li>
+   		<li><a href="#tabs-1">Set deadline</a></li>
+  	</ul>
+	  <p>Drag me around</p>
+	  <button id="infobutton">More info</button>
+	  <div id="dialog" title="Basic dialog">
+	  <p>This is the information that will appear on the card.</p>
+	  </div>
+	  <div id="tabs-1"><input type="text" name="date" id="date" placeholder="Set deadline"></div>
+	  <div id="tabs-2">something here</div>
+	</div>
 </div>
 
 <div id="wrapper"></div>
 
-
-
-
-<section class="">
+<section class="row">
+	<article id="droppable3" class="ui-widget-header">Done</article>
 	<article id="droppable2" class="ui-widget-header">Doing</article>
 	<article id="droppable" class="ui-widget-header">Todo</article>
+
 </section>
 
 <script src="external/jquery/jquery.js"></script>
