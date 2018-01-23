@@ -1,8 +1,20 @@
+body {
+  background: repeating-linear-gradient(
+       135deg,
+       #FFCFDF,
+       #FFCFDF 180px,
+       #FEFDCA 180px,
+       #FEFDCA 360px
+     );
+}
+
 #draggable { 
-  	background: lightblue; 
-  	width: 272px; height: 186px; 
-  	padding: 0.5em; 
-  	z-index: 1000;
+    background: lightblue; 
+    width: 272px; height: 186px; 
+    padding: 0.5em; 
+    z-index: 1000;
+    border-radius: 5px;
+    background: #F1D18A;
   }
 
   .row {
@@ -11,12 +23,38 @@
 }
 
 [id^="droppable"] {
-	display: flex;
-	flex: 4;
- 	flex-direction: column;
-	width: 272px;
-	height: 300px;
-	padding: 0.5em;
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  width: 272px;
+  height: 300px;
+  padding: 0.5em;
+  background: #73B1C1;
 
 }
 
+
+#draggable { 
+    background: lightblue; 
+    width: 272px; height: 186px; 
+    padding: 0.5em; 
+    z-index: 1000;
+    border-radius: 5px;
+    background: #F1D18A;
+  }
+
+  .row {
+  display: flex;
+  text-align: center;
+}
+
+[id^="droppable"] {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  width: 272px;
+  height: 300px;
+  padding: 0.5em;
+  background: #73B1C1;
+
+}
