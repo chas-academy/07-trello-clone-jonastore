@@ -45,11 +45,11 @@ $(document).ready(function() {
 });
 
 
-
+//$('#draggable').clone(true);
 
 $(function(){
     $('#createbutton').on('click', function(){
-		var clone = jQuery('#draggable').clone(true);
+		var clone = $('#draggable').clone(true);
         $("#wrapper").append(clone);
     });
 });
