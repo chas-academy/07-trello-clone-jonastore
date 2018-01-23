@@ -13,6 +13,8 @@ $(document).ready(function() {
 
 	        $( this )
 	          .addClass( "ui-state-highlight" )
+	          .html( "card added to TODO" )
+
 	      }
 	    });
 	     $( "#droppable2"  ).droppable({
@@ -24,6 +26,7 @@ $(document).ready(function() {
 	      drop: function( event, ui ) {
 	        $( this )
 	          .addClass( "ui-state-highlight" )
+	          .html( "card added to DOING" )
 	      }
 	    });
 	     $( "#droppable3"  ).droppable({
@@ -35,6 +38,7 @@ $(document).ready(function() {
 	      drop: function( event, ui ) {
 	        $( this )
 	          .addClass( "ui-state-highlight" )
+	          .html( "card added to DONE" )
 	      }
 	    });
 
@@ -69,4 +73,5 @@ $(function(){
         $("#wrapper").append(clone);
     });
 });
+
 
