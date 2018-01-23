@@ -1,0 +1,11 @@
+#draggable { 
+  	background: lightblue; 
+  	width: 180px; height: 150px; 
+  	padding: 0.5em; }
+
+#droppable, #droppable2 {
+	float: right;
+	width: 198px;
+	height: 300px;
+	padding: 0.5em;
+}
