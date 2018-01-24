@@ -9,10 +9,12 @@ body {
 }
 
 .draggable { 
-    width: 272px; height: 206px; 
+    width: 272px; 
+    height: 285px; 
     padding: 0.5em; 
     z-index: 1000;
     border-radius: 5px;
+    background: lightblue;
   }
 
   .row {

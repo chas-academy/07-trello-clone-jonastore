@@ -52,18 +52,24 @@ $(document).ready(function() {
 	  $( "#dialog" ).dialog( "open" );
 	});
 
-
-	$( "#date" ).datepicker();
-
+	//dialouge
 	$("#infobutton")
 
+	//tabs
 	$( function() {
     $( "#tabs" ).tabs();
   	} );
 
+  	//datepicker
+	$( "#date" ).datepicker();
+	$('#date').change(function (event) {
+	var date = $(event.target).val();
+	$(".dateBox").text(date);
+	});
+
 	//colorpicker
-	$('.colorpicker').on('change', function () {
-	var hexColor = '#' +this.value;
+	$('.colorpicker').change(function (event) {
+	var hexColor = '#' + $(event.target).val();
 	$(".draggable").css("background", hexColor);
 	});
 
@@ -81,8 +87,8 @@ $(document).ready(function() {
 
 });
 
-var clone = '<div class="draggable" class="ui-widget-content"><button class="delete">X</button><div id="tabs"><ul><li><a href="#tabs-2">Card color</a></li><li><a href="#tabs-1">Set deadline</a></li></ul><p>Drag me around</p><button id="infobutton">More info</button><div id="dialog" title="Basic dialog"><p>This is the information that will appear on the card.</p></div><div id="tabs-1"><input type="text" name="date" id="date" placeholder="Set deadline"></div><div id="tabs-2">something here</div></div></div>'
 
+var clone = '<div class="draggable" class=""><button class="delete">X</button><div id="tabs"><ul><li><a href="#tabs-2">Main</a></li><li><a href="#tabs-1">Settings</a></li></ul><div id="dialog" title="Basic dialog"><p class="dialogBox">Content not set</p></div><div id="tabs-2">Title: <h3 class="title">Not set</h3>Deadline: <h3 class="dateBox">Not set</h3><button id="infobutton">Card content</button></div><div id="tabs-1"><form class="inputTitle" action=""><input type="text" name="title" placeholder="Set card title"></form><form class="inputContent" action=""><input type="text" name="title" placeholder="Set card content"></form><input type="text" name="date" id="date" placeholder="Set deadline"><input class="jscolor colorpicker" value="cc66ff"></div></div></div>'
 $(function(){
     $('#createbutton').on('click', function(){
 		var clone = $('.draggable').clone();

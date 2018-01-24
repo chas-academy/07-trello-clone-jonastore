@@ -60,31 +60,33 @@
 	 <button id="createbutton">Create card</button>
 
 </div>
-<div class="draggable" class="">
+<div class="draggable">
 	<button class="delete">X</button>
 	<div id="tabs">
 	<ul>
   		<li><a href="#tabs-2">Settings</a></li>
-   		<li><a href="#tabs-1">Set deadline</a></li>
+   		<li><a href="#tabs-1">Main</a></li>
   	</ul>
-	  <h3 class="title"></h3>
-	  <button id="infobutton">Card content</button>
 	  <div id="dialog" title="Basic dialog">
-	  <p class="dialogBox"></p>
+	  <p class="dialogBox">Content not set</p>
 	  </div>
-	  <div id="tabs-1"><input type="text" name="date" id="date" placeholder="Set deadline"></div>
+	  <div id="tabs-1">
+	  	Title: <h3 class="title">Not set</h3>
+	  	Deadline: <h3 class="dateBox">Not set</h3>
+	  	<button id="infobutton">Card content</button>
+	  </div>
+
 	  <div id="tabs-2">
 	  <form class="inputTitle" action="">
 	  	<input type="text" name="title" placeholder="Set card title">
 	  </form>
-	  <button class="deleteTitle">
 	  <form class="inputContent" action="">
 	  	<input type="text" name="title" placeholder="Set card content">
 	  </form>
+	  	<input type="text" name="date" id="date" placeholder="Set deadline">
 	  	<input class="jscolor colorpicker" value="cc66ff">
 	  </div>
 	</div>
-
 </div>
 
 <div id="wrapper"></div>
