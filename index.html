@@ -64,16 +64,22 @@
 	<button class="delete">X</button>
 	<div id="tabs">
 	<ul>
-  		<li><a href="#tabs-2">Card color</a></li>
+  		<li><a href="#tabs-2">Settings</a></li>
    		<li><a href="#tabs-1">Set deadline</a></li>
   	</ul>
-	  <p>Drag me around</p>
+	  <p class="title">Drag me around</p>
 	  <button id="infobutton">More info</button>
 	  <div id="dialog" title="Basic dialog">
 	  <p>This is the information that will appear on the card.</p>
 	  </div>
 	  <div id="tabs-1"><input type="text" name="date" id="date" placeholder="Set deadline"></div>
-	  <div id="tabs-2"><input class="jscolor colorpicker" value="cc66ff"></div>
+	  <div id="tabs-2">
+	  <form class="inputForm" action="index.html">
+	  	<input type="text" name="title" class="inputText" placeholder="Change title">
+	  	<button class="button" type="submit">Change title</button>
+	  </form>
+	  	<input class="jscolor colorpicker" value="cc66ff">
+	  </div>
 	</div>
 
 </div>

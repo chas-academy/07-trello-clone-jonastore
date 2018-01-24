@@ -61,12 +61,16 @@ $(document).ready(function() {
     $( "#tabs" ).tabs();
   	} );
 
-	$('.colorpicker').on('change', function (e) {
-
+	//colorpicker
+	$('.colorpicker').on('change', function () {
 	var hexColor = '#' +this.value;
-
 	$(".draggable").css("background", hexColor);
+	});
 
+	//change title text
+	$('.inputForm').on('change', function () {
+	var infoText = +this.value;
+	$(".title").append(infoText);
 	});
 
 });
