@@ -9,11 +9,12 @@ $(document).ready(function() {
         	"ui-droppable-active": "ui-state-active",
         	"ui-droppable-hover": "ui-state-hover"
       	},
-	      drop: function( event, ui ) {
 
+	      drop: function( event, ui ) {
 	        $( this )
 	          .addClass( "ui-state-highlight" )
-	          .html( "card added to TODO" )	   
+	          .html( "card added to TODO" )	
+
 	      }
 	      
 
@@ -76,8 +77,8 @@ $(document).ready(function() {
 
 	//change title text
 	$('.inputTitle').change(function (event) {
-	var infoText = $(event.target).val();
-	$(".title").text(infoText);
+	var titleText = $(event.target).val();
+	$(".title").text(titleText);
 	});
 
 	//change dialog content
@@ -89,20 +90,34 @@ $(document).ready(function() {
 });
 
 
-var clone = '<div class="draggable" class=""><button class="delete">X</button><div id="tabs"><ul><li><a href="#tabs-2">Main</a></li><li><a href="#tabs-1">Settings</a></li></ul><div id="dialog" title="Basic dialog"><p class="dialogBox">Content not set</p></div><div id="tabs-2">Title: <h3 class="title">Not set</h3>Deadline: <h3 class="dateBox">Not set</h3><button id="infobutton">Card content</button></div><div id="tabs-1"><form class="inputTitle" action=""><input type="text" name="title" placeholder="Set card title"></form><form class="inputContent" action=""><input type="text" name="title" placeholder="Set card content"></form><input type="text" name="date" id="date" placeholder="Set deadline"><input class="jscolor colorpicker" value="cc66ff"></div></div></div>'
+var clone = $(`<div class="draggable" class=""><button class="delete">X</button><div id="tabs"><ul><li><a href="#tabs-2">Main</a></li><li><a href="#tabs-1">Settings</a></li></ul><div id="dialog" title="Basic dialog"><p class="dialogBox">Content not set</p></div><div id="tabs-2">Title: <h3 class="title">Not set</h3>Deadline: <h3 class="dateBox">Not set</h3><button id="infobutton">Card content</button></div><div id="tabs-1"><form class="inputTitle" action=""><input type="text" name="title" placeholder="Set card title"></form><form class="inputContent" action=""><input type="text" name="title" placeholder="Set card content"></form><input type="text" name="date" id="date" placeholder="Set deadline"><input class="jscolor colorpicker" value="cc66ff"></div></div></div>`);
+
 $(function(){
     $('#createbutton').on('click', function(){
-		var clone = $('.draggable').clone();
+		//var clone = $('.draggable').clone();
         $("#wrapper").append(clone);
     });
 });
 
 //delete card
 $("body").on("click", ".delete", function(event) {
-    var card = $(event.target).closest(".draggable");
-    card.toggle("shake");
-    card.toggle("explode");
+    $(event.target).closest(".draggable").remove();
   });
+
+//shake n bake
+$("body").on("click", ".shake", function(event) {
+    var card = $(event.target).closest(".draggable");
+    card.toggle("shake", 1000);
+    card.toggle("bounce", 2000);
+	
+	$(".title").text("Not set");
+    $(".dialogBox").text("Content not set");
+	$(".dateBox").text("Not set");
+	$("input").val("");
+
+
+  });
+
 
 
 
