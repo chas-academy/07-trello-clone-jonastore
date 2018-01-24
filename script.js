@@ -70,13 +70,13 @@ $(document).ready(function() {
 	//change title text
 	$('.inputTitle').change(function (event) {
 	var infoText = $(event.target).val();
-	$(".title").append(infoText);
+	$(".title").text(infoText);
 	});
 
 	//change dialog content
-	$('.inputForm').change(function (event) {
+	$('.inputContent').change(function (event) {
 	var infoText = $(event.target).val();
-	$(".title").append(infoText);
+	$(".dialogBox").text(infoText);
 	});
 
 });
