@@ -61,15 +61,13 @@ $(document).ready(function() {
     $( "#tabs" ).tabs();
   	} );
 
-  	$('#colorpicker').on('change', function (e) {
+	$('.colorpicker').on('change', function (e) {
 
 	var hexColor = '#' +this.value;
 
 	$(".draggable").css("background", hexColor);
 
-});
-
-
+	});
 
 });
 
