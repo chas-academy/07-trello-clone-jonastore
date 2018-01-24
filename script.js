@@ -68,8 +68,14 @@ $(document).ready(function() {
 	});
 
 	//change title text
-	$('.inputForm').on('change', function () {
-	var infoText = +this.value;
+	$('.inputTitle').change(function (event) {
+	var infoText = $(event.target).val();
+	$(".title").append(infoText);
+	});
+
+	//change dialog content
+	$('.inputForm').change(function (event) {
+	var infoText = $(event.target).val();
 	$(".title").append(infoText);
 	});
 
