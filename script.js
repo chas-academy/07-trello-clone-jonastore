@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
 	$( function() {
-	    $( ".draggable" ).draggable({ snap: ".ui-widget-header" }).resizable();;
+	    $( ".draggable" ).draggable({ snap: ".ui-widget-header" }).resizable();
+;
 	    $( "#droppable"  ).droppable({
 	      accept: ".draggable",
       		classes: {
@@ -53,7 +54,7 @@ $(document).ready(function() {
 	});
 
 	//dialouge
-	$("#infobutton")
+	$("#infobutton");
 
 	//tabs
 	$( function() {
@@ -96,8 +97,11 @@ $(function(){
     });
 });
 
+//delete card
 $("body").on("click", ".delete", function(event) {
-    $(event.target).closest(".draggable").remove();
+    var card = $(event.target).closest(".draggable");
+    card.toggle("shake");
+    card.toggle("explode");
   });
 
 
