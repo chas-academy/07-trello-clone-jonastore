@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
 	$( function() {
-	    $( "#draggable" ).draggable().resizable();;
-	    $( "#draggable" ).draggable({ snap: ".ui-widget-header" });
+	    $( "#draggable" ).draggable({ snap: ".ui-widget-header" }).resizable();;
 	    $( "#droppable"  ).droppable({
 	      accept: "#draggable",
       		classes: {
@@ -70,13 +69,13 @@ $(document).ready(function() {
 
 $(function(){
     $('#createbutton').on('click', function(){
-		var clone = $('#draggable').clone(true);
+		var clone = $('#draggable').clone();
         $("#wrapper").append(clone);
     });
 });
 
 $("body").on("click", ".delete", function(event) {
-    $(event.target).closest(".ui-widget-content").remove();
+    $(event.target).closest("#draggable").remove();
   });
 
 
