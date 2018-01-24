@@ -13,9 +13,10 @@ $(document).ready(function() {
 
 	        $( this )
 	          .addClass( "ui-state-highlight" )
-	          .html( "card added to TODO" )
-
+	          .html( "card added to TODO" )	   
 	      }
+	      
+
 	    });
 	     $( "#droppable2"  ).droppable({
 	     	accept: "#draggable",
@@ -73,5 +74,9 @@ $(function(){
         $("#wrapper").append(clone);
     });
 });
+
+$("body").on("click", ".delete", function(event) {
+    $(event.target).closest(".ui-widget-content").remove();
+  });
 
 
