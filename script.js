@@ -107,13 +107,17 @@ $("body").on("click", ".delete", function(event) {
 //shake n bake
 $("body").on("click", ".shake", function(event) {
     var card = $(event.target).closest(".draggable");
+
+ 	$(".draggable").css("background", "#ADD8E6");
+   
     card.toggle("shake", 1000);
     card.toggle("bounce", 2000);
 	
 	$(".title").text("Not set");
     $(".dialogBox").text("Content not set");
 	$(".dateBox").text("Not set");
-	$("input").val("");
+	$(".colorpicker").val("#ADD8E6");
+	$(".inputfield").val("");
 
 
   });
