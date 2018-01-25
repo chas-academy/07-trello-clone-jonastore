@@ -20,12 +20,11 @@ body {
   .row {
   display: flex;
   text-align: center;
+  flex-direction: row;
 }
 
 [id^="droppable"] {
-  display: flex;
   flex: 4;
-  flex-direction: column;
   width: 272px;
   height: 300px;
   padding: 0.5em;
@@ -86,4 +85,12 @@ body{
   }
   select {
     width: 200px;
+  }
+
+  @media screen and (max-width: 480px) { 
+
+    .row {
+    flex-direction: column;
+    }
+
   }

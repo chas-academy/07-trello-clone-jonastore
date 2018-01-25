@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	$( function() {
 	    $( ".draggable" ).draggable({ snap: ".ui-widget-header" }).resizable();
-;
+
 	    $( "#droppable"  ).droppable({
 	      accept: ".draggable",
       		classes: {
@@ -14,9 +14,7 @@ $(document).ready(function() {
 	        $( this )
 	          .addClass( "ui-state-highlight" )
 	          .html( "card added to TODO" )	
-
-	      }
-	      
+	      }    
 
 	    });
 	     $( "#droppable2"  ).droppable({
@@ -49,13 +47,16 @@ $(document).ready(function() {
 
 	 });
 
-	$( "#dialog" ).dialog({ autoOpen: false });
+	$( "#dialog" ).dialog({ 
+		autoOpen: false,
+        modal: true 
+    });
 	$( "#infobutton" ).click(function() {
 	  $( "#dialog" ).dialog( "open" );
 	});
 
 	//dialouge
-	$("#infobutton");
+	//$("#infobutton");
 
 	//tabs
 	$( function() {
@@ -113,7 +114,7 @@ $("body").on("click", ".shake", function(event) {
     card.toggle("shake", 1000);
     card.toggle("bounce", 2000);
 	
-	$(".title").text("Not set");
+	$(".title").text();
     $(".dialogBox").text("Content not set");
 	$(".dateBox").text("Not set");
 	$(".colorpicker").val("#ADD8E6");

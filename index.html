@@ -10,14 +10,22 @@
 </head>
 <body>
 
-
 <h1>Welcome to Jonas Kanban</h1>
+
 
 <div class="ui-widget">
 	<p>Structure. Determination. Willpower.</p>
 	 <button id="createbutton">Create card</button>
 
 </div>
+
+<!-- custom widget starts here -->
+<div id="custom">
+	
+</div>
+<!-- custom widget ends here -->
+
+<!-- card starts here -->
 <div class="draggable">
 	<button class="delete">X</button>
 	<div id="tabs">
@@ -47,14 +55,17 @@
 	  </div>
 	</div>
 </div>
+<!-- card ends here -->
+
 
 <div id="wrapper"></div>
 
+<!-- columns start here -->
 <section class="row">
-		<article id="droppable" class="ui-widget-header">TODO</article>
-
+	<article id="droppable" class="ui-widget-header">TODO</article>
 	<article id="droppable2" class="ui-widget-header">DOING</article>
-		<article id="droppable3" class="ui-widget-header">DONE</article>
+	<article id="droppable3" class="ui-widget-header">DONE</article>
+<!-- columns end here -->
 
 
 </section>
@@ -63,5 +74,6 @@
 <script src="external/jquery/jquery.js"></script>
 <script src="script.js"></script>
 <script src="jscolor.js"></script>
+<script src="yearclock.js"></script>
 </body>
 </html>
