@@ -105,7 +105,7 @@ $("body").on("click", ".delete", function(event) {
     $(event.target).closest(".draggable").remove();
   });
 
-//shake n bake
+//reset card
 $("body").on("click", ".shake", function(event) {
     var card = $(event.target).closest(".draggable");
 
