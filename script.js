@@ -90,6 +90,28 @@ $(document).ready(function() {
 	$(".dialogBox").text(infoText);
 	});
 
+	//delete card
+	$("body").on("click", ".delete", function(event) {
+    	$(event.target).closest(".draggable").remove();
+  	});
+
+	//reset card
+	$("body").on("click", ".shake", function(event) {
+    	var card = $(event.target).closest(".draggable");
+ 	$(".draggable").css("background", "#ADD8E6");
+   
+    card.toggle("shake", 1000);
+    card.toggle("bounce", 2000);
+	
+	$(".title").text("Not set");
+    $(".dialogBox").text("Content not set");
+	$(".dateBox").text("Not set");
+	$(".colorpicker").val("#ADD8E6");
+	$(".inputfield").val("");
+
+
+  	});
+
 });
 
 
@@ -97,33 +119,12 @@ var clone = $(`<div class="draggable" class=""><button class="delete">X</button>
 
 $(function(){
     $('#createbutton').on('click', function(){
-		//var clone = $('.draggable').clone();
+		// var clone = $('.draggable').clone();
         $("#wrapper").append(clone);
     });
 });
 
-//delete card
-$("body").on("click", ".delete", function(event) {
-    $(event.target).closest(".draggable").remove();
-  });
 
-//reset card
-$("body").on("click", ".shake", function(event) {
-    var card = $(event.target).closest(".draggable");
-
- 	$(".draggable").css("background", "#ADD8E6");
-   
-    card.toggle("shake", 1000);
-    card.toggle("bounce", 2000);
-	
-	$(".title").text();
-    $(".dialogBox").text("Content not set");
-	$(".dateBox").text("Not set");
-	$(".colorpicker").val("#ADD8E6");
-	$(".inputfield").val("");
-
-
-  });
 
 
 

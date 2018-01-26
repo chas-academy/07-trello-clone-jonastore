@@ -12,9 +12,8 @@ $(document).ready(function() {
 		},
 
 		_update: function() {
-
 			this.element.val("The current year is " + new Date().getFullYear());//new Date($.now())
-
+			
 		},
 
 		_destroy: function() {

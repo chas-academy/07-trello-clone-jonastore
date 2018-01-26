@@ -23,6 +23,16 @@ body {
   flex-direction: row;
 }
 
+.column {
+  display: inline;
+}
+
+.list {
+  border: black 1px solid;
+  display: inline;
+
+}
+
 [id^="droppable"] {
   flex: 4;
   width: 272px;
