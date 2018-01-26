@@ -112,6 +112,14 @@ $(document).ready(function() {
 
   	});
 
+  	$('#wrapper .column').sortable({
+        connectWith: '#wrapper .column',
+        /*update: function(){
+          console.log(getItems('#example-2-3'));
+            $.cookie('cookie-2', getItems('#example-2-3'));
+        }*/
+    });
+
 });
 
 
