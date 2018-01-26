@@ -49,7 +49,8 @@ $(document).ready(function() {
 
 	$( "#dialog" ).dialog({ 
 		autoOpen: false,
-        modal: true 
+        modal: true,
+        hide: { effect: "fold", duration: 300 },
     });
 	$( "#infobutton" ).click(function() {
 	  $( "#dialog" ).dialog( "open" );
