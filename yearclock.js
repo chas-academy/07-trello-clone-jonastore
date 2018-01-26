@@ -3,10 +3,7 @@ $(document).ready(function() {
 		options: {
 			value: 0
 		},
-		//new Date($.now());
-		//<input value="">
 		_create: function() {
-			this.element.addClass("yearclock");
 			this._update();
 		},
 
