@@ -29,8 +29,22 @@ body {
 
 .list {
   display: inline;
-
+  list-style: none;
 }
+
+.card {
+  background: green;
+}
+
+/*.todo {
+  background: red;
+}
+.doing {
+  background: blue;
+}
+.done {
+  background: green;
+}*/
 
 [id^="droppable"] {
   flex: 4;

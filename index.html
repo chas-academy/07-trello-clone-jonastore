@@ -33,9 +33,9 @@
   		<li><a href="#tabs-2">Main</a></li>
    		<li><a href="#tabs-1">Settings</a></li>
   	</ul>
-	  <div id="dialog" title="Card content">
+	  <!--<div id="dialog" title="Card content">
 	  <p class="dialogBox">Content not set</p>
-	  </div>
+	  </div>-->
 	  <div id="tabs-2">
 	  	Title: <h3 class="title">Not set</h3>
 	  	Deadline: <h3 class="dateBox">Not set</h3>
@@ -44,12 +44,13 @@
 
 	  <div id="tabs-1">
 	  <form class="inputTitle" action="">
-	  	<input class="inputfield" type="text" name="title" placeholder="Set card title">
+	  	<input class="inputfield1" type="text" name="title" placeholder="Set card title">
 	  </form>
 	  <form class="inputContent" action="">
-	  	<input class="inputfield" type="text" name="title" placeholder="Set card content">
+	  	<input class="inputfield2" type="text" name="content" placeholder="Set card content">
 	  </form>
-	  	<input class="inputfield" type="text" name="date" id="date" placeholder="Set deadline">
+	  	<input class="inputfield3" type="text" name="date" id="date" placeholder="Set deadline">
+	  	<button class="createButton">Create card</button>
 	  	<input class="jscolor colorpicker" value="ADD8E6">
 	  	<button class="shake">Clear card</button>
 	  </div>
@@ -59,21 +60,25 @@
 
 <div id="wrapper">
 
+	<div class="column column-create">
+		
+	</div>
+
 	<div class="column">
-		<ul class="list">
-			<li class="list-item">item 1</li>
+		<ul class="list todo">
+			<li class="list-item">TODO</li>
 		</ul>
 	</div>
 
 	<div class="column">
-		<ul class="list">
-			<li class="list-item">item 2</li>
+		<ul class="list doing">
+			<li class="list-item">DOING</li>
 		</ul>
 	</div>
 
 	<div class="column">
-		<ul class="list">
-			<li class="list-item">item 3</li>
+		<ul class="list done">
+			<li class="list-item">DONE</li>
 		</ul>
 	</div>
 

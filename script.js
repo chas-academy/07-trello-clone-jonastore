@@ -57,9 +57,6 @@ $(document).ready(function() {
 	  $( "#dialog" ).dialog( "open" );
 	});
 
-	//dialouge
-	//$("#infobutton");
-
 	//tabs
 	$( function() {
     $( "#tabs" ).tabs();
@@ -90,6 +87,16 @@ $(document).ready(function() {
 	$(".dialogBox").text(infoText);
 	});
 
+	//create 
+	$(".createButton").click(function () {
+    var title = $("input[name='title']").val();
+    var content = $("input[name='content']").val();
+    var date = $("input[name='date']").val();
+
+    var $li = $("<ul class='ui-state-default'/>").text(title + content + date);
+    $(".column-create").append($li);
+	});
+
 	//delete card
 	$("body").on("click", ".delete", function(event) {
     	$(event.target).closest(".draggable").remove();
@@ -112,12 +119,12 @@ $(document).ready(function() {
 
   	});
 
+
   	$('#wrapper .column').sortable({
         connectWith: '#wrapper .column',
-        /*update: function(){
+        update: function(){
           console.log(getItems('#example-2-3'));
-            $.cookie('cookie-2', getItems('#example-2-3'));
-        }*/
+        }
     });
 
 });
