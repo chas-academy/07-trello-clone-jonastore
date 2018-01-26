@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 		_update: function() {
 
-			this.element.val(new Date().getFullYear());//new Date($.now())
+			this.element.val("The current year is " + new Date().getFullYear());//new Date($.now())
 
 		},
 
@@ -27,7 +27,7 @@ $(document).ready(function() {
 	//widget ends here
 
 	var time = $("<input disabled />");
-	time.appendTo("body");
+	time.appendTo(".yearclock");
 	//init widget
 	time.yearclock();
 
