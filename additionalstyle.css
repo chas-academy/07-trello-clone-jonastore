@@ -37,7 +37,7 @@ body {
   height: 50px;
 }
 
-/*.todo {
+/* .todo {
   background: red;
 }
 .doing {
@@ -45,7 +45,7 @@ body {
 }
 .done {
   background: green;
-}*/
+}*/ 
 
 [id^="droppable"] {
   flex: 4;
