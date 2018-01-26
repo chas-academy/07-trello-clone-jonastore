@@ -50,7 +50,8 @@ $(document).ready(function() {
 	$( "#dialog" ).dialog({ 
 		autoOpen: false,
         modal: true,
-        hide: { effect: "fold", duration: 300 },
+        show: { effect: "fold"},
+        hide: { effect: "fold"},
     });
 	$( "#infobutton" ).click(function() {
 	  $( "#dialog" ).dialog( "open" );
