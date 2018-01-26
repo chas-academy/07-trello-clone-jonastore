@@ -33,7 +33,8 @@ body {
 }
 
 .card {
-  background: green;
+  background: lightblue;
+  height: 50px;
 }
 
 /*.todo {

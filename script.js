@@ -93,8 +93,8 @@ $(document).ready(function() {
     var content = $("input[name='content']").val();
     var date = $("input[name='date']").val();
 
-    var $li = $("<ul class='ui-state-default'/>").text(title + content + date);
-    $(".column-create").append($li);
+    var $ul = $("<ul class='card'>" + title + " " + content + " " + date +"</ul>");//.text(title + content + date);
+    $(".column-create").append($ul);
 	});
 
 	//delete card
